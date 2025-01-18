@@ -17,11 +17,13 @@ services:
       - "3000:3000"
     depends_on:
       - backend
+    environment:
+      - BROWSER=none
     networks:
       - app-network
 
   mongo:
-    image: mongo:latest
+    image: mongo:4.4
     volumes:
       - mongo-data:/data/db
     networks:
