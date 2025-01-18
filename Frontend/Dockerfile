@@ -19,6 +19,10 @@ FROM node:16-slim
 # Set the working directory inside the container
 WORKDIR /app
 
+#Executable Permissions
+RUN chmod +x /app/node_modules/.bin/*
+
+
 # Copy the built application files from the build stage
 COPY --from=build /app /app
 
