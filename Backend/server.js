@@ -9,7 +9,8 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://0.0.0.0:27017/your-database', {
+const mongoURI = process.env.MONGODB_URI || 'mongodb://mongo:27017/your-database'; // Use 'mongo' as the service name
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -21,5 +22,6 @@ const itemRoutes = require('./routes/itemRoutes');
 app.use('/items', itemRoutes);
 
 // Start the server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;  // Use environment variable for port
 app.listen(PORT, '0.0.0.0', () => console.log(`Server running on port ${PORT}`));
+
