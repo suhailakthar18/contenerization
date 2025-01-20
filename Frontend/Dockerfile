@@ -28,6 +28,12 @@ COPY --from=build /app /app
 
 # Expose the port that the app will run on
 EXPOSE 3000
+# to of deselet the default browser 
+ENV BROWSER=none
+
+#CMD ["sh", "-c", "BROWSER=none npm start"] or add this in cmd 
+#or refer the readme file to login to the container and install the browser 
+
 
 # Command to start the app
 CMD ["npm", "start"]
