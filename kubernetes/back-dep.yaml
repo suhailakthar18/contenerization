@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: <your-dockerhub-username>/backend:latest
+        image: suhailakthar/react-backend
         ports:
         - containerPort: 5000
 ---
