@@ -16,7 +16,7 @@ spec:
         - name: frontend
           image: suhailakthar/react-frontend:latest
           ports:
-            - containerPort: 5000
+            - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -27,5 +27,5 @@ spec:
     app: frontend
   ports:
     - port: 80
-      targetPort: 5000
+      targetPort: 3000
   type: NodePort
