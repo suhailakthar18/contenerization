@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: <your-dockerhub-username>/frontend:latest
+          image: suhailakthar/react-frontend:latest
           ports:
             - containerPort: 5000
 ---
@@ -28,4 +28,4 @@ spec:
   ports:
     - port: 80
       targetPort: 5000
-  type: LoadBalancer
+  type: NodePort
