@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: suhailakthar/react-frontend:latest
+          image: suhailakthar/react-frontend:v1
           ports:
             - containerPort: 3000
 ---
