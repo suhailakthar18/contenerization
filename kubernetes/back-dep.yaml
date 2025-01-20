@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: suhailakthar/react-backend
+        image: suhailakthar/react-backend:latest
         ports:
         - containerPort: 5000
 ---
